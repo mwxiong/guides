@@ -1,12 +1,7 @@
 Animation & Transition Guide
 ============================
 
-The history of Famo.us is the following: we wondered if we could move a square
-`<div>` at 60 FPS entirely in JavaScript without relying on CSS3 keyframe animations...
-then we built a framework around it. Animation was as core to Famo.us then
-as it is now. You'll find that unlike the standard HTML5 techniques, our
-animations are far more flexible and extensible. We're still waiting for CSS3
-to catch up.
+Famo.us began when we moved a square `<div>` at 60 FPS entirely in JavaScript without relying on CSS3 keyframe animations. From that proof of concept, we built a framework. Animation was as core to Famo.us then as it is now. You'll find that unlike the standard HTML5 techniques, our animations are far more flexible and extensible. They can be halted, chained, and customized. We support a wide variety of built in tween transitions as well as transitions that are inspired from physical principles like springs and walls.
 
 ## Outline
 
@@ -33,7 +28,7 @@ state.set(100, {duration : 500});
 
 At any time you can call `.get` which returns the current value of the Transitionable
 given that it has been transitioning at a constant rate since `.set` was called.
-You can also call `.set` with no arguments, which changes the value immediatly;
+You can also call `.set` with no arguments, which changes the value immediately;
 no transition is applied.
 
 We can do the same to arrays of arbitrary length.
@@ -126,7 +121,7 @@ anywhere else in your app.
 
 ## <a name="physics">Physics Transitions</a>
 
-The limitation of tween transitions is that they are a discrete 30 collection set.
+The limitation of tween transitions is that they are a discrete set of 30.
 Sometimes what is needed is a continuum of curves. For instance, when coding a
 scrollview, you want to scroll based on the velocity of the user input, which
 can be any number. A tween will never be able to accommodate this.
@@ -187,7 +182,7 @@ else in your app.
 ## <a name="tween_vs_physics">Tweens vs Physics </a>
 
 With physics transitions, you may wonder, "Why use a tween transition
-at all?" The achilles heal of a physics transition is that it cannot have a
+at all?" The Achilles' Heel of a physics transition is that it cannot have a
 predetermined duration like a tween can. With physics you gain intuitive feel,
 but sacrifice on exact duration. If you don't need events to fire with precise
 timing, but instead respond to variable user input, it is suggested to use a physics transition.
