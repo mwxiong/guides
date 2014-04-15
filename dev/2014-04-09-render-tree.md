@@ -289,3 +289,12 @@ To recap, here's a comparison between traditional DOM, and the Famo.us Render Tr
 | *Encapsulation*   | Views & Widgets         | Shadow DOM    |
 | *Meaning*         | Semantic                | Syntactic     |
 | *Language*        | JavaScript              | HTML          |
+
+
+## COMMENTS FROM DF:
+
+- Might be worth mentioning that renderables have a render(), modifiers have a modify().
+- Why doesn't the render tree have a delete node method?  This is an important point
+- I think expanding on the notion that the render tree is future instructions to the render engine instead of immeidate draw commands is missing.
+- I don't know that the DOM has syntactic meaning and famous's tree has semantic meaning.
+  I would instead say:  Tree is responsible for | Structure | Structure, Layout, Content
