@@ -275,8 +275,13 @@ Render Tree makes a clear separation between layout (Modifiers) content
 
 In fact, if you want to know what the position, or opacity of a surface
 at the bottom of the Render Tree, you just have to multiply the opacities and
-transforms of the Modifiers above it. If that makes sense, you know exactly
-how the Render Tree works.
+transforms of the Modifiers above it. 
+
+Another point of divergence is that the DOM executes a redraw whenever a node's 
+styling or content is changed (immediate mode). In Famo.us, the Render Tree 
+batches changes (retain mode) behind the scenes by buffering them against the 
+`requestAnimationFrame` API. This ensures changes are resolved at the most optimal time 
+(synced to your monitor's refresh rate).
 
 To recap, here's a comparison between traditional DOM, and the Famo.us Render Tree.
 
@@ -287,5 +292,6 @@ To recap, here's a comparison between traditional DOM, and the Famo.us Render Tr
 | *Nodes*           | Renderables & Modifiers | HTML Elements |
 | *Reflows*         | No                      | Yes           |
 | *Encapsulation*   | Views & Widgets         | Shadow DOM    |
-| *Meaning*         | Semantic                | Syntactic     |
+| *Meaning*         | Structure               | Structure, Rendering |
+| *Render Cycle*    | Retain Mode             | Immediate Mode |
 | *Language*        | JavaScript              | HTML          |
