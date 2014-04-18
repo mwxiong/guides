@@ -218,7 +218,7 @@ In the example below, we add a Scrollview.
 Internally, Scrollview has its own complex logic, but that is hidden from the
 developer, who can simply include it in her project by adding it to the tree
 like any other node. It's the Famo.us equivalent of the
-[Shadow DOM](#http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/).
+[Shadow DOM](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/).
 After instantiating a Scrollview, we can populate it with any other renderables
 via its `sequenceFrom` interface, thus building its internal Render Tree.
 
